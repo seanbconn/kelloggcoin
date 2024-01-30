@@ -17,6 +17,29 @@ blockchain = [
   { "from_user" => "anthony", "to_user" => "evan", "amount" => 1750 }
 ]
 
+# Account creation, index
+
+bens_balance = 0
+brians_balance = 0
+evans_balance = 0
+anthonys_balance = 0
+
+# 
+
+# Algorithm
+
+if transaction ["from_user"] == "ben"
+  bens_balance = bens_balance - transaction ["amount"]
+elsif transaction ["from_user"] =="brian"
+  brians_balance = brians_balance - transaction ["amount"]
+
+# Output
+
+puts Ben_Balance
+puts Brian_Balance
+puts Evan_Balance
+puts Anthony_Balance
+
 # Write code below that returns the number of KelloggCoin that each user has in their 
 # KelloggCoin "wallet".
 
