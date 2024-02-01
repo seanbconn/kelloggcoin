@@ -19,29 +19,42 @@ blockchain = [
 
 # Account creation, index
 
-bens_balance = 0
-brians_balance = 0
-evans_balance = 0
-anthonys_balance = 0
-
-# 
+balance_ben = 0
+balance_brian = 0
+balance_brian = 0
+balance_anthony = 0
 
 # Algorithm
+# 👇👇👇 Your code HERE 👇👇👇
 
-if transaction ["from_user"] == "ben"
-  bens_balance = bens_balance - transaction ["amount"]
-elsif transaction ["from_user"] =="brian"
-  brians_balance = brians_balance - transaction ["amount"]
+# Withdrawals
+if transaction["from_user"] == "ben"
+  balance_ben = balance_ben - transaction["amount"]
+elsif transaction["from_user"] == "brian"
+  balance_brian = balance_brian - transaction["amount"]
+elsif transaction["from_user"] == "evan"
+  balance_evan = balance_evan - transaction["amount"]
+elsif transaction["from_user"] == "anthony"
+  balance_anthony = balance_anthony - transaction["amount"]
+end
+
+# Deposits
+if transaction["to_user"] == "ben"
+  balance_ben = balance_ben + transaction["amount"]
+elsif transaction["to_user"] == "brian"
+  balance_brian = balance_brian + transaction["amount"]
+elsif transaction["to_user"] == "evan"
+  balance_evan = balance_evan + transaction["amount"]
+elsif transaction["to_user"] == "anthony"
+  balance_anthony = balance_anthony + transaction["amount"]
+end
 
 # Output
 
-puts Ben_Balance
-puts Brian_Balance
-puts Evan_Balance
-puts Anthony_Balance
-
-# Write code below that returns the number of KelloggCoin that each user has in their 
-# KelloggCoin "wallet".
+puts "Ben's KelloggCoin Account Balance is #{balance_ben}"
+puts "Brian's KelloggCoin Account Balance is #{balance_brian}"
+puts "Evan's KelloggCoin Account Balance is #{balance_evan}"
+puts "Anthony's KelloggCoin Account Balance is #{balance_anthony}"
 
 # It should print out:
 # Ben's KelloggCoin balance is 14000
@@ -49,4 +62,4 @@ puts Anthony_Balance
 # Evan's KelloggCoin balance is 10350
 # Anthony's KelloggCoin balance is 2650
 
-# 👇👇👇 Your code HERE 👇👇👇
+
